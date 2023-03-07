@@ -121,6 +121,25 @@ li:hover {
     width: 100%;
 }
 
+footer {
+    width: 100%;
+    background: black;
+    color: white;
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 15px 0;
+}
+
+footer p {
+    line-height: 3px;
+}
+
+.footer {
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
 @media (min-width: 768px) {
     .nav-el {
         display: flex;
