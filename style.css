@@ -44,6 +44,7 @@ body {
 .hero-post h4,
 .hero-post p {
     margin: 0;
+    width: 365px;
 }
 
 .hero-post p {
@@ -67,37 +68,27 @@ h4 {
 .icon {
     background: black;
     position: absolute;
-    padding: 10px;
     color: white;
+    top: 10px;
+    right: 10px;
+    padding: 10px 12px;
+}
+
+.hidden {
+    display: none;
 }
 
 .nav-el {
     position: relative;
 }
 
-.icon {
-    position: absolute;
-    top: 10px;
-    right: 0;
-
-    padding: 10px 12px;
-}
-
-/* .nav-el {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 0;
-    align-items: center;
-    padding: 0 17px;    f
-} */
 ul {
     padding: 0;
     margin-bottom: 0;
 }
 
 li {
-    background: rgb(12, 12, 12);
+    background: rgb(20, 20, 20);
     color: white;
     padding: 15px;
     list-style-type: none;
@@ -109,29 +100,10 @@ li:hover {
     background:rgb(71, 94, 10)
 }
 
-
-
-
-/* ul li {
-    display: inline;
-    list-style-type: none;
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: 600;
-    padding-left: 25px;
-} */
-
 #logo-el {
     padding: 0 17px;
     margin-bottom: 12px;
 }
-
-/* #logo-el {
-    display: flex;
-    align-items: center;
-
-} */
-
 
 .container {
     width: 400px;
@@ -149,8 +121,82 @@ li:hover {
     width: 100%;
 }
 
+@media (min-width: 768px) {
+    .nav-el {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 10px 0;
+        align-items: center;
+        padding: 0 5px;
 
+     }
+    ul li {
+        display: inline;
+        list-style-type: none;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 600;
+        padding-left: 25px;
+    }
+    ul {
+        margin: 0;
+    }
+ 
+    .icon {
+        display: none;
+    }
+    #nav {
+        display: block;
+    }
+    li {
+        background: none;
+        color: black;
+    }
+    li:hover {
+        background: none;
+    }
+    .container {
+        width: 800px;
+    }
+    .article {
+        display: grid;
+        grid-template: auto / auto auto auto;
+        grid-gap: 1em 1em;
+        
+    }
+    .hero-post {
+    
+        top: 400px;
+    }
+    .hero-post p {
+        width: 750px;
+    }
+    a {
+        font-size: 0.9rem;
+    }
+}
 
+@media (min-width: 1024px) {
+    .hero {
+        width: 100%;
+    }
+    #img-hero {
+        height: 600px;
+        object-fit: cover;
+    }
+    .hero-post {
+        top: 430px;
+        left: 20%;
+    }
+    .hero-post p {
+        width: 80%;
+    }
+    a {
+        font-size: 0.9rem;
+    }
+
+}
 
 
 
