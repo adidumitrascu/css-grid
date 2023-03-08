@@ -88,7 +88,7 @@ li {
     list-style-type: none;
 }
 
-a {
+li a {
     color: white;
     text-decoration: none;
     display: block;
@@ -97,7 +97,7 @@ a {
     padding: 15px;
 }
 
-a:hover {
+li a:hover {
     background:rgb(71, 94, 10)
 }
 
@@ -196,6 +196,8 @@ footer p {
         font-size: 0.9rem;
         color:rgb(20, 20, 20);
         text-decoration: none;
+        background: none;
+        padding: 5px 5px;
     }
      
     .tab a:last-child {
@@ -206,7 +208,7 @@ footer p {
         content: '';
         position: absolute;
         left: 0;
-        bottom: -3px;
+        bottom: 0;
         width: 0;
         height: 3px;
         background-color: rgb(217, 255, 0);
@@ -216,6 +218,9 @@ footer p {
         
     .tab a:hover:before {
         width: 100%
+    }
+    .tab a:hover {
+        background: none;
     }
 }
 
