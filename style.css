@@ -5,39 +5,36 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
-
 #logo-img {
     width: 25px;
     margin-top: 18px;
 }
 
-#img-hero {
-    width: 100%;
+#logo-el {
+    padding: 0 17px;
+    margin-bottom: 12px;
 }
 
 #logo-el h5 {
     display: inline;
     vertical-align: middle;
     padding-bottom: 17px;
+}
 
+#img-hero {
+    width: 100%;
 }
 
 .hero  {
-    position: relative;
-    
-   
-
+    position: relative;   
 }
 
 .hero-post {
     position: absolute;
-
     display: inline-block;
     top: 85px;
     left: 15px;
-    color: white;
-    
+    color: white;   
 }
 
 .hero-post h1,
@@ -88,28 +85,26 @@ ul {
 }
 
 li {
-    background: rgb(20, 20, 20);
-    color: white;
-    padding: 15px;
     list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
     display: block;
     text-transform: uppercase;
+    background: rgb(20, 20, 20);
+    padding: 15px;
 }
 
-li:hover {
+a:hover {
     background:rgb(71, 94, 10)
-}
-
-#logo-el {
-    padding: 0 17px;
-    margin-bottom: 12px;
 }
 
 .container {
     width: 400px;
     margin: 0 auto;
     padding: 0;
-
 }
 
 .article {
@@ -142,13 +137,17 @@ footer p {
 
 @media (min-width: 768px) {
     .nav-el {
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         list-style-type: none;
-        margin: 10px 0;
         align-items: center;
         padding: 0 5px;
-
+        background: white;
      }
     ul li {
         display: inline;
@@ -161,7 +160,6 @@ footer p {
     ul {
         margin: 0;
     }
- 
     .icon {
         display: none;
     }
@@ -181,18 +179,43 @@ footer p {
     .article {
         display: grid;
         grid-template: auto / auto auto auto;
-        grid-gap: 1em 1em;
-        
+        grid-gap: 1em 1em;   
     }
     .hero-post {
-    
         top: 400px;
     }
     .hero-post p {
         width: 750px;
     }
-    a {
+
+    .tab a {
+        display: inline-block;
+        margin-right: 30px;
+        position: relative;
+        margin-bottom: 0;
         font-size: 0.9rem;
+        color:rgb(20, 20, 20);
+        text-decoration: none;
+    }
+     
+    .tab a:last-child {
+        margin-right: 0px;
+    }
+        
+    .tab a:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 3px;
+        background-color: rgb(217, 255, 0);
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+        
+    .tab a:hover:before {
+        width: 100%
     }
 }
 
@@ -214,7 +237,6 @@ footer p {
     a {
         font-size: 0.9rem;
     }
-
 }
 
 
